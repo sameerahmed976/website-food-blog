@@ -517,10 +517,12 @@ hr {
   }
 
   .cards__container {
-    width: 65vw;
+    width: 66vw;
+    gap: 1rem;
+    padding-left: 1rem;
   }
   .cards__comment {
-    width: 30vw;
+    width: 31vw;
   }
   .most__commented__post {
     padding-left: 0;
@@ -529,8 +531,49 @@ hr {
   }
 
   .card__comment__image {
-    height: 8rem;
+    height: 100%;
     max-width: 100%;
     width: 100%;
+    object-fit: contain;
+  }
+  .card__comment .card__content__paragraph {
+    font-size: 0.6rem;
+  }
+  .card__content__heading {
+    font-size: 0.6rem;
+  }
+
+  .background-color {
+    display: block;
+    background-color: var(--secondary-color);
+  }
+  .main__heading {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.01rem;
+  }
+  .footer__container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .footer__paragraph {
+    max-width: 200px;
+  }
+  .footer__heading {
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer__container {
+    gap: 7rem;
+  }
+  .footer__paragraph {
+    max-width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__container {
+    gap: 10 rem;
   }
 }
