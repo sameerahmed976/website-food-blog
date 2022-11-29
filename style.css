@@ -68,6 +68,7 @@ li {
 
 a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 img {
@@ -179,4 +180,38 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: var(--transition-8);
+  transform: translateX(-100%);
+}
+.nav__links--show {
+  transform: translateX(0%);
+  opacity: 1;
+  height: 16rem;
+  transition: var(--transition-8);
+}
+
+.nav__links li a {
+  display: block;
+  padding: 0.8rem;
+  font-size: var(--font-size-h5);
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  transition: var(--transition-8);
+}
+.nav__links:last-child {
+  padding-bottom: 0.5rem;
+}
+.nav__links li a:hover {
+  padding-left: 50px;
+  background-color: white;
+  color: var(--primary-color);
 }
